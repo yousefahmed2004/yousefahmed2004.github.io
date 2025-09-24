@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineer | Machine Learning & Deep Learning Specialist </title>
+    <title>Yousef Ahmed | AI Engineer & ML Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* الأساسيات */
@@ -117,7 +117,7 @@
         
         .hero-text h1 {
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             background: linear-gradient(to right, var(--accent-purple), var(--light-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -126,7 +126,7 @@
         .hero-text .title {
             font-size: 1.5rem;
             color: var(--light-purple);
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         
         .hero-text p {
@@ -146,11 +146,19 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border: none;
             cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
         }
         
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-purple);
+            color: var(--accent-purple);
         }
         
         .hero-image {
@@ -235,6 +243,45 @@
             height: 100%;
             background: linear-gradient(to right, var(--accent-purple), var(--light-purple));
             border-radius: 5px;
+        }
+        
+        /* قسم الشهادات */
+        .certifications {
+            background-color: var(--secondary-black);
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .cert-card {
+            background-color: var(--primary-black);
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s;
+            border-left: 4px solid var(--accent-purple);
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .cert-card h3 {
+            color: var(--light-purple);
+            margin-bottom: 10px;
+        }
+        
+        .cert-card .issuer {
+            color: var(--text-gray);
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .cert-card .date {
+            color: var(--accent-purple);
+            font-size: 0.8rem;
         }
         
         /* قسم المشاريع */
@@ -443,7 +490,7 @@
                 padding: 60px 0;
             }
             
-            .projects-grid {
+            .projects-grid, .cert-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -454,10 +501,11 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">AI Portfolio</div>
+                <div class="logo">Yousef Ahmed</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -470,13 +518,16 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>AI & Machine Learning Specialist</h1>
-                    <div class="title">Deep Learning | Computer Vision | IoT</div>
-                    <p>I create innovative AI solutions that solve real-world problems. My passion lies in developing intelligent systems that make a positive impact on society.</p>
-                    <a href="#projects" class="btn">View My Projects</a>
+                    <h1>Yousef Ahmed</h1>
+                    <div class="title">AI Engineer | Machine Learning & Deep Learning Specialist</div>
+                    <p>Passionate AI Engineer with expertise in Machine Learning and Deep Learning. I specialize in developing intelligent models to solve complex problems efficiently.</p>
+                    <div>
+                        <a href="#projects" class="btn">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://via.placeholder.com/400" alt="Profile Picture">
+                    <img src="https://via.placeholder.com/400" alt="Yousef Ahmed">
                 </div>
             </div>
         </div>
@@ -490,9 +541,18 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am an AI Engineer specializing in Machine Learning and Deep Learning with a focus on Computer Vision applications. I have extensive experience in developing end-to-end AI solutions that address complex challenges.</p>
-                    <p>My work combines cutting-edge technologies with practical implementation to create systems that have real-world impact. I'm passionate about using AI for social good and developing solutions that can make a difference in people's lives.</p>
-                    <p>I continuously explore new techniques and technologies in the rapidly evolving field of artificial intelligence, always seeking to push the boundaries of what's possible with machine learning.</p>
+                    <p>Passionate AI Engineer with expertise in Machine Learning (ML) and Deep Learning (DL). I specialize in developing and optimizing intelligent models to solve complex problems efficiently. My work focuses on leveraging state-of-the-art AI techniques to build scalable and high-performance solutions.</p>
+                    <p>In addition to my AI expertise, I have strong Front-End Development skills, allowing me to build interactive and user-friendly web applications.</p>
+                    <p>Constantly seeking to expand my knowledge and contribute to innovative projects in AI, Deep Learning, and Front-End Development. Open to collaborations and new opportunities in these fields.</p>
+                    
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--light-purple);">Key Skills:</h3>
+                    <ul style="color: var(--text-gray); padding-left: 20px;">
+                        <li>Designing and training Machine Learning & Deep Learning models</li>
+                        <li>Building and optimizing Neural Networks (CNN, RNN, Transformers)</li>
+                        <li>Implementing AI algorithms to solve real-world challenges</li>
+                        <li>Enhancing model performance through Optimization & Hyperparameter Tuning</li>
+                        <li>Developing responsive and dynamic Front-End applications using modern frameworks</li>
+                    </ul>
                 </div>
                 <div class="skills">
                     <div class="skill-item">
@@ -524,13 +584,58 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>IoT Integration</span>
+                            <span>Frontend Development</span>
                             <span>85%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-level" style="width: 85%"></div>
                         </div>
                     </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>IoT Integration</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشهادات -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Licenses & Certifications</h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>NTI-Huawei Egyptian Talents Academy (ETA) - Artificial Intelligence (AI)</h3>
+                    <div class="issuer">National Telecommunication Institute (NTI)</div>
+                    <div class="date">Issued Sep 2025</div>
+                </div>
+                <div class="cert-card">
+                    <h3>AI, ML and Quantum ML Fundamentals</h3>
+                    <div class="issuer">Ministry of Youth & Sports of Egypt</div>
+                    <div class="date">Issued Feb 2025</div>
+                </div>
+                <div class="cert-card">
+                    <h3>Practical ML for Data Scientists</h3>
+                    <div class="issuer">MaharaTech - ITI Mooca</div>
+                    <div class="date">Issued Nov 2024</div>
+                </div>
+                <div class="cert-card">
+                    <h3>Python programming Basics</h3>
+                    <div class="issuer">MaharaTech - ITI Mooca</div>
+                    <div class="date">Issued Oct 2024</div>
+                </div>
+                <div class="cert-card">
+                    <h3>Artificial Intelligence and Applications Training</h3>
+                    <div class="issuer">Zewail City of Science and Technology</div>
+                    <div class="date">Issued Aug 2023</div>
                 </div>
             </div>
         </div>
@@ -640,15 +745,6 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>yousefahmed87a6@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
@@ -658,16 +754,25 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>yousefahmed87a6@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
                             <h3>Location</h3>
-                            <p>Tech City, Innovation State</p>
+                            <p>Egypt</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" class="form-control" required>
@@ -696,7 +801,7 @@
                 <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-kaggle"></i></a>
             </div>
-            <p class="copyright">© 2024 AI Engineer Portfolio | All Rights Reserved</p>
+            <p class="copyright">© 2024 Yousef Ahmed | AI Engineer Portfolio</p>
         </div>
     </footer>
 
@@ -735,11 +840,18 @@
         }, observerOptions);
         
         // تطبيق تأثير الظهور على العناصر
-        document.querySelectorAll('.project-card, .about-content, .contact-content').forEach(el => {
+        document.querySelectorAll('.project-card, .about-content, .contact-content, .cert-card').forEach(el => {
             el.style.opacity = 0;
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s, transform 0.5s';
             observer.observe(el);
+        });
+        
+        // معالجة نموذج التواصل
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
         });
     </script>
 </body>
