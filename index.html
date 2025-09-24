@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بورتفوليو احترافي</title>
+    <title>AI Engineer | Machine Learning & Deep Learning Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* الأساسيات */
         * {
@@ -122,6 +123,12 @@
             -webkit-text-fill-color: transparent;
         }
         
+        .hero-text .title {
+            font-size: 1.5rem;
+            color: var(--light-purple);
+            margin-bottom: 10px;
+        }
+        
         .hero-text p {
             font-size: 1.2rem;
             color: var(--text-gray);
@@ -233,7 +240,7 @@
         /* قسم المشاريع */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
         
@@ -252,6 +259,7 @@
         .project-image {
             height: 200px;
             overflow: hidden;
+            position: relative;
         }
         
         .project-image img {
@@ -263,6 +271,17 @@
         
         .project-card:hover .project-image img {
             transform: scale(1.1);
+        }
+        
+        .project-date {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(138, 43, 226, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
         }
         
         .project-info {
@@ -277,6 +296,28 @@
         .project-info p {
             color: var(--text-gray);
             margin-bottom: 15px;
+        }
+        
+        .project-features {
+            margin-bottom: 15px;
+        }
+        
+        .project-features ul {
+            list-style-type: none;
+        }
+        
+        .project-features li {
+            margin-bottom: 8px;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .project-features li:before {
+            content: "✔";
+            color: var(--light-purple);
+            position: absolute;
+            left: 0;
         }
         
         .project-tags {
@@ -317,7 +358,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 15px;
+            margin-right: 15px;
         }
         
         .contact-form {
@@ -401,6 +442,10 @@
             section {
                 padding: 60px 0;
             }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -409,12 +454,12 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">بورتفوليو</div>
+                <div class="logo">AI Portfolio</div>
                 <ul class="nav-links">
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">عني</a></li>
-                    <li><a href="#projects">المشاريع</a></li>
-                    <li><a href="#contact">التواصل</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -425,12 +470,13 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>مرحباً، أنا مطور ويب مبدع</h1>
-                    <p>أقوم بإنشاء تجارب ويب استثنائية باستخدام أحدث التقنيات. شغفي يكمن في تحويل الأفكار إلى واقع رقمي مذهل.</p>
-                    <a href="#projects" class="btn">عرض أعمالي</a>
+                    <h1>AI & Machine Learning Specialist</h1>
+                    <div class="title">Deep Learning | Computer Vision | IoT</div>
+                    <p>I create innovative AI solutions that solve real-world problems. My passion lies in developing intelligent systems that make a positive impact on society.</p>
+                    <a href="#projects" class="btn">View My Projects</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://via.placeholder.com/400" alt="صورة شخصية">
+                    <img src="https://via.placeholder.com/400" alt="Profile Picture">
                 </div>
             </div>
         </div>
@@ -440,18 +486,18 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>عني</h2>
+                <h2>About Me</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>أنا مطور ويب متخصص في إنشاء تطبيقات ويب حديثة وسريعة الاستجابة. لدي خبرة تزيد عن 5 سنوات في مجال تطوير الويب.</p>
-                    <p>أعمل باستمرار على تطوير مهاراتي والتعلم عن التقنيات الجديدة. أؤمن بالعمل الجماعي وأستمتع بتحديات حل المشكلات المعقدة.</p>
-                    <p>هدفي هو إنشاء تجارب رقمية لا تنسى تلبي احتياجات المستخدمين وتتجاوز توقعات العملاء.</p>
+                    <p>I am an AI Engineer specializing in Machine Learning and Deep Learning with a focus on Computer Vision applications. I have extensive experience in developing end-to-end AI solutions that address complex challenges.</p>
+                    <p>My work combines cutting-edge technologies with practical implementation to create systems that have real-world impact. I'm passionate about using AI for social good and developing solutions that can make a difference in people's lives.</p>
+                    <p>I continuously explore new techniques and technologies in the rapidly evolving field of artificial intelligence, always seeking to push the boundaries of what's possible with machine learning.</p>
                 </div>
                 <div class="skills">
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>HTML/CSS</span>
+                            <span>Python & TensorFlow</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar">
@@ -460,7 +506,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>JavaScript</span>
+                            <span>Deep Learning</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -469,20 +515,20 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>React</span>
-                            <span>85%</span>
+                            <span>Computer Vision</span>
+                            <span>92%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%"></div>
+                            <div class="skill-level" style="width: 92%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Node.js</span>
-                            <span>80%</span>
+                            <span>IoT Integration</span>
+                            <span>85%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%"></div>
+                            <div class="skill-level" style="width: 85%"></div>
                         </div>
                     </div>
                 </div>
@@ -494,48 +540,89 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-title">
-                <h2>مشاريعي</h2>
+                <h2>My Projects</h2>
             </div>
             <div class="projects-grid">
+                <!-- مشروع MAFQOOD -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x200" alt="مشروع 1">
+                        <img src="https://via.placeholder.com/400x200/8a2be2/ffffff?text=MAFQOOD" alt="MAFQOOD Project">
+                        <div class="project-date">Oct 2024 - Present</div>
                     </div>
                     <div class="project-info">
-                        <h3>موقع تجارة إلكترونية</h3>
-                        <p>موقع متكامل للتجارة الإلكترونية مع نظام دفع آمن وإدارة مخزون.</p>
+                        <h3>MAFQOOD | Missing Child Finder</h3>
+                        <p>AI-Powered Solution for Reuniting Missing Children with Their Families</p>
+                        
+                        <div class="project-features">
+                            <ul>
+                                <li>Uses Deep Learning and Computer Vision technologies</li>
+                                <li>Advanced Siamese Network model for face matching</li>
+                                <li>Real-time notifications for potential matches</li>
+                                <li>Secure and private data handling</li>
+                            </ul>
+                        </div>
+                        
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Siamese Network</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- مشروع Weapon Detection -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x200" alt="مشروع 2">
+                        <img src="https://via.placeholder.com/400x200/a855f7/ffffff?text=Weapon+Detection" alt="Weapon Detection Project">
+                        <div class="project-date">Mar 2024 - Jul 2024</div>
                     </div>
                     <div class="project-info">
-                        <h3>تطبيق إدارة المهام</h3>
-                        <p>تطبيق ويب لإدارة المهام اليومية مع ميزات متقدمة للتنظيم.</p>
+                        <h3>Weapon Detection Based on Computer Vision | IoT</h3>
+                        <p>Advanced spy robot for military reconnaissance missions</p>
+                        
+                        <div class="project-features">
+                            <ul>
+                                <li>Tank-shaped robot for enemy territory surveys</li>
+                                <li>Accurate weapon counting capabilities</li>
+                                <li>Remote control via integrated application</li>
+                                <li>Real-time transmission of scanning results</li>
+                            </ul>
+                        </div>
+                        
                         <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">PWA</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Military Tech</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- مشروع إضافي -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x200" alt="مشروع 3">
+                        <img src="https://via.placeholder.com/400x200/1e1e1e/ffffff?text=AI+Solutions" alt="AI Solutions">
+                        <div class="project-date">Jan 2024 - Present</div>
                     </div>
                     <div class="project-info">
-                        <h3>منصة تعليمية</h3>
-                        <p>منصة للتعلم عبر الإنترنت مع نظام إدارة محتوى متكامل.</p>
+                        <h3>AI-Powered Healthcare Diagnostics</h3>
+                        <p>Medical image analysis system for early disease detection</p>
+                        
+                        <div class="project-features">
+                            <ul>
+                                <li>Deep learning models for medical imaging</li>
+                                <li>Integration with hospital systems</li>
+                                <li>Real-time analysis and reporting</li>
+                                <li>HIPAA compliant data security</li>
+                            </ul>
+                        </div>
+                        
                         <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Bootstrap</span>
+                            <span class="tag">Healthcare AI</span>
+                            <span class="tag">Medical Imaging</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Data Security</span>
                         </div>
                     </div>
                 </div>
@@ -547,53 +634,53 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2>تواصل معي</h2>
+                <h2>Contact Me</h2>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i>📧</i>
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h3>البريد الإلكتروني</h3>
-                            <p>example@domain.com</p>
+                            <h3>Email</h3>
+                            <p>yousefahmed87a6@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i>📱</i>
+                            <i class="fas fa-phone"></i>
                         </div>
                         <div>
-                            <h3>الهاتف</h3>
-                            <p>+1234567890</p>
+                            <h3>Phone</h3>
+                            <p>01006947262</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i>📍</i>
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h3>الموقع</h3>
-                            <p>مدينتي، بلدي</p>
+                            <h3>Location</h3>
+                            <p>Tech City, Innovation State</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <label for="name">الاسم</label>
+                            <label for="name">Name</label>
                             <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">البريد الإلكتروني</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">الرسالة</label>
+                            <label for="message">Message</label>
                             <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn">إرسال الرسالة</button>
+                        <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -604,11 +691,12 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-kaggle"></i></a>
             </div>
-            <p class="copyright">© 2023 جميع الحقوق محفوظة | تم التصميم والبرمجة بحب</p>
+            <p class="copyright">© 2024 AI Engineer Portfolio | All Rights Reserved</p>
         </div>
     </footer>
 
