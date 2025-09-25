@@ -22,6 +22,7 @@
             --light-blue: #00c4e7;
             --text-white: #f0f0f0;
             --text-gray: #b0b0b0;
+            --whatsapp-green: #25D366;
         }
 
         body {
@@ -636,10 +637,53 @@
             background: linear-gradient(to right, var(--accent-blue), var(--light-blue));
             transform: translateY(-3px) scale(1.1);
         }
+        
+        /* WhatsApp specific styling */
+        .social-link.whatsapp:hover {
+            background: var(--whatsapp-green);
+        }
 
         .copyright {
             color: var(--text-gray);
             font-size: 0.9rem;
+        }
+
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
 
         /* Mobile Responsiveness */
@@ -692,6 +736,14 @@
             .ml-terms ul {
                 justify-content: center;
             }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
@@ -699,7 +751,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo"><a href="https://yousefahmed2004.github.io/">Yousef Ahmed</div>
+                <div class="logo">Yousef Ahmed</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -1001,61 +1053,18 @@
                 <a href="https://github.com/yousefahmed2004" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/yousef-ahmed-029bb22a3/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.kaggle.com/yousefahmedabdo" class="social-link" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="https://wa.me/201006947262" class="social-link whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p class="copyright">© 2025 Yousef Ahmed | AI Engineer Portfolio</p>
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/201006947262" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Intersection Observer for fade-in effect
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Apply fade-in effect to elements
-        document.querySelectorAll('.project-card, .about-content, .contact-content, .cert-card, .education-item, .skill-tag').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-        
-        // Contact form handling (alert is just a placeholder)
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-            });
-        }
-    </script>
-</
+            anchor
