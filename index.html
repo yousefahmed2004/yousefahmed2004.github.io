@@ -18,6 +18,13 @@
    Space Grotesk display / Inter body / JetBrains Mono data.
    ============================================================ */
 
+/* ============================================================
+   YOUSEF AHMED — AI ENGINEER PORTFOLIO
+   Design system: "Embedding Space" — dark ink ground, copper +
+   teal accents (the two colors of a vector plotted in 3D),
+   Space Grotesk display / Inter body / JetBrains Mono data.
+   ============================================================ */
+
 :root{
   --ink:        #0a0d13;
   --ink-soft:   #11161f;
@@ -247,6 +254,38 @@ button{ font-family:inherit; }
 .tag-dot{ width:6px; height:6px; border-radius:50%; background: var(--teal); box-shadow: 0 0 8px var(--teal); animation: pulse 2s ease-in-out infinite; }
 @keyframes pulse{ 0%,100%{ opacity:1;} 50%{ opacity:.35; } }
 
+/* ---------- robot face-swap easter egg ---------- */
+.robot-overlay{
+  position:absolute;
+  left: 36.5%; top: 0.5%; width: 28%; height: 34%;
+  z-index: 3; pointer-events:none;
+  opacity:0; transform: scale(0.82) translateY(6px);
+  transform-origin: 50% 85%;
+  transition: opacity .35s var(--ease), transform .4s var(--ease);
+  filter: drop-shadow(0 14px 22px rgba(0,0,0,0.5));
+}
+.hero-portrait:hover .robot-overlay,
+.hero-portrait.robot-active .robot-overlay{
+  opacity:1; transform: scale(1) translateY(0);
+}
+.robot-overlay svg{ width:100%; height:100%; overflow:visible; }
+.robot-head-shape{ stroke: var(--ink-line-strong); stroke-width:1.5; }
+.robot-visor-frame{ stroke: var(--teal); stroke-width:1.4; opacity:.8; }
+.robot-eye{ fill: var(--copper); filter: drop-shadow(0 0 5px var(--copper)); animation: pulse 1.8s ease-in-out infinite; }
+.robot-eye-delay{ animation-delay: .25s; }
+.robot-antenna-line{ stroke: var(--ink-line-strong); stroke-width: 2; }
+.robot-antenna-tip{ fill: var(--copper); filter: drop-shadow(0 0 6px var(--copper)); animation: pulse 1.4s ease-in-out infinite; }
+.robot-grille{ stroke: var(--ink-line-strong); stroke-width: 2.5; stroke-linecap: round; }
+.robot-scanline{ fill: rgba(236,241,238,0.55); animation: scanSweep 2.6s ease-in-out infinite; }
+@keyframes scanSweep{
+  0%{ transform: translateX(0); }
+  50%{ transform: translateX(58px); }
+  100%{ transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce){
+  .robot-eye, .robot-antenna-tip, .robot-scanline{ animation: none; }
+}
+
 .scroll-cue{
   position:absolute; left:32px; bottom: 28px; z-index:2;
   display:flex; flex-direction:column; align-items:center; gap:10px;
@@ -459,7 +498,6 @@ button{ font-family:inherit; }
   .meta-row{ flex-direction:column; gap:4px; }
   .meta-v{ text-align:left; }
 }
-
 </style>
 </head>
 <body>
